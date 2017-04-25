@@ -1,0 +1,27 @@
+{
+  "name": "GodExtension",
+  "version": "1.0.0",
+  "summary": "all usefull category of ios developer",
+  "description": "all common usefull category of ios developer",
+  "homepage": "https://github.com/luckyBoyRoy/GodExtension",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "roy": "luckyBoyRoy@163.com"
+  },
+  "source": {
+    "git": "https://github.com/luckyBoyRoy/GodExtension.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GodExtension/Classes/**/*",
+  "dependencies": {
+    "Masonry": [
+
+    ]
+  }
+}

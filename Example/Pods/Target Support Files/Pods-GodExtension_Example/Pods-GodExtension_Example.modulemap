@@ -1,0 +1,6 @@
+framework module Pods_GodExtension_Example {
+  umbrella header "Pods-GodExtension_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

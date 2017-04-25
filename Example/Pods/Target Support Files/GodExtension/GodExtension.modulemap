@@ -1,0 +1,6 @@
+framework module GodExtension {
+  umbrella header "GodExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}
