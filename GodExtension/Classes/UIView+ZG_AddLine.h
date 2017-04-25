@@ -21,4 +21,6 @@
             LeftMargin:(CGFloat)leftMargin
            RightMargin:(CGFloat)rightMargin;
 
+- (void)zg_removeLineIsUp:(BOOL)isUp;
+
 @end

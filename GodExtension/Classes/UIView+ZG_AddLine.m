@@ -10,15 +10,35 @@
 #import "ZGMacro.h"
 #import "Masonry.h"
 
-static NSInteger const ZG_AddLineViewTag = 100;
+static NSInteger const ZG_AddLineViewTopLineViewTag = 99991;
+
+static NSInteger const ZG_AddLineViewBottomLineViewTag = 100001;
 
 @implementation UIView (ZG_AddLine)
 
-- (void)removeViewWithTag:(NSInteger)tag{
+- (UIView *)findLineView:(NSInteger)tag{
+    UIView *resultView = nil;
     for (UIView *aView in [self subviews]) {
         if (aView.tag == tag) {
-            [aView removeFromSuperview];
+            resultView = aView;
+            break;
         }
+    }
+    if (!resultView) {
+        resultView = [[UIView alloc]init];
+        resultView.backgroundColor = ZG_GLAY_COLOR;
+        resultView.tag = tag;
+    }
+    
+    return resultView;
+}
+
+- (NSInteger)lineViewTagByIsUp:(BOOL)isUp
+{
+    if (isUp) {
+        return ZG_AddLineViewTopLineViewTag;
+    } else {
+        return ZG_AddLineViewBottomLineViewTag;
     }
 }
 
@@ -27,12 +47,8 @@ static NSInteger const ZG_AddLineViewTag = 100;
            RightMargin:(CGFloat)rightMargin
 {
     WS(weakSelf);
-    [self removeViewWithTag:ZG_AddLineViewTag];
-    UIView *lineView = [[UIView alloc]init];
+    UIView *lineView = [self findLineView:[self lineViewTagByIsUp:isUp]];
     [self addSubview:lineView];
-    lineView.tag = ZG_AddLineViewTag;
-    
-    lineView.backgroundColor = ZG_GLAY_COLOR;
     if (isUp) {
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(weakSelf);
@@ -56,10 +72,8 @@ static NSInteger const ZG_AddLineViewTag = 100;
            RightMargin:(CGFloat)rightMargin
 {
     WS(weakSelf);
-    [self removeViewWithTag:ZG_AddLineViewTag];
-    UIView *lineView = [[UIView alloc]init];
+    UIView *lineView = [self findLineView:[self lineViewTagByIsUp:isUp]];
     [self addSubview:lineView];
-    lineView.tag = ZG_AddLineViewTag;
     if (customColor) {
         lineView.backgroundColor = customColor;
     } else {
@@ -79,6 +93,14 @@ static NSInteger const ZG_AddLineViewTag = 100;
             make.right.mas_equalTo(weakSelf).offset(-rightMargin);
             make.height.mas_equalTo(1);
         }];
+    }
+}
+
+- (void)zg_removeLineIsUp:(BOOL)isUp
+{
+    UIView *lineView = [self findLineView:[self lineViewTagByIsUp:isUp]];
+    if (lineView) {
+        [lineView removeFromSuperview];
     }
 }
 

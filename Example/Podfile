@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'GodExtension_Example' do
   pod 'GodExtension', :path => '../'
+  pod 'Masonry'
 
   target 'GodExtension_Tests' do
     inherit! :search_paths

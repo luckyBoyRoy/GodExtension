@@ -2,16 +2,16 @@
 //  main.m
 //  GodExtension
 //
-//  Created by 赵辉 on 04/25/2017.
-//  Copyright (c) 2017 赵辉. All rights reserved.
+//  Created by luckyBoyRoy on 04/25/2017.
+//  Copyright (c) 2017 luckyBoyRoy. All rights reserved.
 //
 
 @import UIKit;
-#import "ZHGodAppDelegate.h"
+#import "ZGAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([ZHGodAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([ZGAppDelegate class]));
     }
 }

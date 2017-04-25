@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GodExtension'
-  s.version          = '1.0.0'
-  s.summary          = 'all usefull category of ios developer'
+  s.version          = '0.1.0'
+  s.summary          = 'some common usefull category for ios developer'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,13 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-all common usefull category of ios developer
+some common usefull category for ios developer to help quick develop
                        DESC
 
   s.homepage         = 'https://github.com/luckyBoyRoy/GodExtension'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'roy' => 'luckyBoyRoy@163.com' }
+  s.author           = { 'luckyBoyRoy' => 'luckyBoyRoy@163.com' }
   s.source           = { :git => 'https://github.com/luckyBoyRoy/GodExtension.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

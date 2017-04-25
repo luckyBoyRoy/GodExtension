@@ -1,19 +1,20 @@
 PODS:
-  - GodExtension (1.0.0):
+  - GodExtension (0.1.0):
     - Masonry
   - Masonry (1.0.2)
 
 DEPENDENCIES:
   - GodExtension (from `../`)
+  - Masonry
 
 EXTERNAL SOURCES:
   GodExtension:
     :path: ../
 
 SPEC CHECKSUMS:
-  GodExtension: 7e14e677bfeccd9ba3b7ca361a09d8bc0d5ddcdb
+  GodExtension: 79d641905ecc039facce6dde5577ff6b8973cab7
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
 
-PODFILE CHECKSUM: 4ec90a39de522c3d0109676e666229484a7497cf
+PODFILE CHECKSUM: b2dc849a49342ccfe0757d565edab6c2d309f169
 
 COCOAPODS: 1.1.1
